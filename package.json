@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "/\\.(png|jp(e*)g|svg|gif)$/, use: ['file-loader']",
     "build:prod": "webpack --mode production",
     "lint:css": "stylelint \"src/**/*.css\"",
     "lint:css:fix": "stylelint \"src/**/*.css\" --fix",
@@ -33,11 +33,15 @@
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@types/webpack": "^5.28.5",
+    "babel-plugin-import": "^1.13.8",
+    "css-loader": "^7.1.2",
     "eslint": "^9.20.0",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-storybook": "^0.11.2",
+    "file-loader": "^6.2.0",
     "globals": "^15.14.0",
     "storybook": "^8.5.3",
+    "style-loader": "^4.0.0",
     "stylelint": "^16.14.1",
     "stylelint-config-standard": "^37.0.0",
     "ts-loader": "^9.5.2",
@@ -49,9 +53,12 @@
     "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
+    "antd": "^5.24.0",
     "classnames": "^2.5.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router": "^7.2.0",
+    "react-router-dom": "^7.2.0"
   },
   "eslintConfig": {
     "extends": [

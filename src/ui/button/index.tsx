@@ -1,7 +1,7 @@
 import React from 'react';
 import {FC, ReactNode} from "react";
 import cn from 'classnames';
-import styles from './index.module.css';
+import * as styles from './index.module.css';
 
 type Props = {
     children: ReactNode;
@@ -10,7 +10,13 @@ type Props = {
 };
 
 export const Button: FC<Props> = ({children, color = 'primary', disabled = false}) => {
-    return (<button
-        className={cn({[styles.primary]: color === 'primary', [styles.secondary]: color === 'secondary'})}
-        disabled={disabled}>{children}</button>);
+    return (
+        <button
+            className={cn({[styles.primary]: color === 'primary', 
+            [styles.secondary]: color === 'secondary'})}
+            disabled={disabled}
+            >
+                {children}
+        </button>
+    );
 }
