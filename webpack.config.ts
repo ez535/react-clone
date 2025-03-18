@@ -36,10 +36,21 @@ const config: WebpackConfiguration = {
                   {
                     loader: 'css-loader',
                     options: {
-                      modules: true,
-                    }
+                      modules: {
+                        localIdentName: '[local]',
+                      },
+                      importLoaders: 1,
+                    },
                   },
                 ],
+            },
+            {
+              test: /\.css$/,        
+              exclude: /\.module\.css$/, 
+              use: [
+                'style-loader',
+                'css-loader', 
+              ],
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
