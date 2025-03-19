@@ -24,12 +24,12 @@ const MailIcon = () => (
 export const SocialLinks: FC<Props> = () => {
     const socialLinksItems = SocialLinksList.map((socialItem, index) => (
         <li className={cn(styles.socialLinksItem)} key={String(index)}>
-        <NavLink
-            to={socialItem.href || '/'}
-        >
-            {socialItem.id === 'whatsup' ? <WhatsUpIcon /> : socialItem.id === 'mail' ? <MailIcon /> : null}
-        </NavLink>
-    </li>
+            <NavLink
+                to={socialItem.href || '/'}
+            >
+                {socialItem.id === 'whatsup' ? <WhatsUpIcon /> : socialItem.id === 'mail' ? <MailIcon /> : null}
+            </NavLink>
+        </li>
     ));
     return (
         <>

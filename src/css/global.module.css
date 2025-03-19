@@ -18,8 +18,10 @@
 :global a {
     outline: none;
     text-decoration: none;
+    color: #000;
 }
 
 :global ul {
     padding-left: unset;
+    margin: unset;
 }
