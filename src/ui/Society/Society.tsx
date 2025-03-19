@@ -10,7 +10,7 @@ export const Society: FC<Props> = () => {
     return (
         <>
             <div className={cn(styles.society)}>
-                <a href="https://store.alfabank.ru/policy" className={cn(styles.society__link)}>
+                <a href="https://store.alfabank.ru/policy" className={cn(styles.societyLink)}>
                     Политика конфиденциальности <br></br>и обработки персональных данных  
                 </a>
             </div>
