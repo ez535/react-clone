@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "styreneaweb-regular";
+    font-family: styreneaweb-regular;
     src: local("styreneaweb-regular"),
      url("../assets/fonts/styreneaweb-regular.ttf") format("truetype");
     font-weight: normal;
@@ -7,7 +7,7 @@
 
 :global * {
     box-sizing: border-box;
-    font-family: 'styreneaweb-regular';
+    font-family: styreneaweb-regular, sans-serif;
 }
 
 :global body {
