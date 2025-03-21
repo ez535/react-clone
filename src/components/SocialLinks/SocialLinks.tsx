@@ -2,7 +2,6 @@ import React, {FC} from 'react';
 import {SocialLinksList} from '../../SocialLinksList';
 import cn from 'classnames';
 import { NavLink } from 'react-router-dom';
-
 import * as styles from './SocialLinks.module.css';
 
 type Props = {

@@ -14,59 +14,60 @@ const config: WebpackConfiguration = {
     mode: "development",
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: {
-        filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'build'),
-        clean: true,
+      filename: '[name].[contenthash].js',
+      path: path.resolve(__dirname, 'build'),
+      clean: true,
     },
     plugins: [
-        new webpack.ProgressPlugin(),
-        new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'assets', 'index.html') })
+      new webpack.ProgressPlugin(),
+      new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'assets', 'index.html') })
     ],
     module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/,
-            },
-            {
-                test: /\.css$/,
-                use: [
-                  'style-loader',
-                  {
-                    loader: 'css-loader',
-                    options: {
-                      modules: {
-                        localIdentName: '[local]',
-                      },
-                      importLoaders: 1,
-                    },
-                  },
-                ],
-            },
-            {
-              test: /\.css$/,        
-              exclude: /\.module\.css$/, 
+      rules: [
+          {
+              test: /\.tsx?$/,
+              use: 'ts-loader',
+              exclude: /node_modules/,
+          },
+          {
+              test: /\.css$/,
               use: [
                 'style-loader',
-                'css-loader', 
-              ],
-            },
-            {
-                test: /\.(png|jpe?g|gif|svg)$/i,
-                use: [
-                  {
-                    loader: 'file-loader',
+                {
+                  loader: 'css-loader',
+                  options: {
+                    modules: {
+                      localIdentName: '[local]',
+                    },
+                    importLoaders: 1,
                   },
-                ],
-            },
-        ],
+                },
+              ],
+          },
+          {
+            test: /\.css$/,        
+            exclude: /\.module\.css$/, 
+            use: [
+              'style-loader',
+              'css-loader', 
+            ],
+          },
+          {
+              test: /\.(png|jpe?g|gif|svg)$/i,
+              use: [
+                {
+                  loader: 'file-loader',
+                },
+              ],
+          },
+      ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
+      extensions: ['.tsx', '.ts', '.js'],
     },
     devServer: {
-        static: path.resolve(__dirname, 'build'),
+      static: path.resolve(__dirname, 'build'),
+      historyApiFallback: true,
     },
 };
 

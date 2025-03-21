@@ -1,10 +1,12 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom'
-import { Logo } from './ui/logo/index';
-import { Navmenu } from './ui/Navmenu/Navmenu';
-import { Header } from './ui/header/Header';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { MainCatalog } from './ui/Links/MainCatalog/MainCatalog';
+import SdelanoValfe from './pages/sdelano-v-alfe/sdelano-v-alfe';
+import SvoyDizain from './pages/svoy-dizain/svoy-dizain';
+import Contact from './pages/contact/contact';
+import NoPage from './pages/no-page/no-page';
+import { Layout } from './components/Layout';
 import './css/global.module.css';
 
 const rootElement = document.getElementById('app');
@@ -13,13 +15,14 @@ if (!rootElement) throw new Error('No root element');
 const root = createRoot(rootElement);
 root.render(
     <BrowserRouter>
-        <Header 
-            className=''
-            >
-            <Logo className='logo'>A-Store</Logo>
-            <Navmenu className='navMenu'/>
-        </Header>
-
-        <MainCatalog />
+        <Routes>
+            <Route path='/' element={<Layout/>}>
+                <Route index element={<MainCatalog/>}/>
+                <Route path='sdelano-v-alfe' element={<SdelanoValfe/>}/>
+                <Route path='svoi-dizain' element={<SvoyDizain/>}/>
+                <Route path='contact' element={<Contact/>}/>
+                <Route path='*' element={<NoPage/>}/>
+            </Route>
+        </Routes>
     </BrowserRouter>
 );

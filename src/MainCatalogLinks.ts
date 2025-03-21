@@ -1,5 +1,5 @@
-import Catalog1Img from './assets/img/catalog1.jpg';
-import Catalog2Img from './assets/img/catalog2.jpg';
+import Catalog1Img from '../assets/img/catalog1.jpg';
+import Catalog2Img from '../assets/img/catalog2.jpg';
 
 export interface MainCatalogItems {
     id: string;
