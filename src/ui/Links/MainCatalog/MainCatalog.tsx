@@ -1,22 +1,22 @@
 import React, {FC} from 'react';
 import cn from 'classnames';
-import {MainCatalogLinksList} from '../../../MainCatalogLinks';
+import {mainCatalogLinksList} from '../../../routes/MainCatalogLinks';
 import { NavLink } from 'react-router-dom';
 
 import * as styles from './MainCatalog.module.css';
 
 type Props = {
-    className?: string | undefined;
+    className?: string;
 };
 
 export const MainCatalog: FC<Props> = () => {
-    const mainCatalogLinksItems = MainCatalogLinksList.map((mainCatalogItem, index) => (
+    const mainCatalogLinksItems = mainCatalogLinksList.map((mainCatalogItem) => (
         <li 
-            key={String(index)}
+            key={mainCatalogItem.id}
             className={cn(styles.mainCatalogItem)}
         >
             <NavLink
-                to={mainCatalogItem.link || '/'}
+                to={mainCatalogItem.id}
                 className={cn(styles.mainCatalogLink)}
             >
                 {mainCatalogItem.img && <img src={mainCatalogItem.img} alt={mainCatalogItem.label || 'Изображение'} />}
@@ -31,10 +31,8 @@ export const MainCatalog: FC<Props> = () => {
     ));
 
     return (
-        <>
-            <ul className={cn(styles.mainCatalogLinks)} >
-                {mainCatalogLinksItems}
-            </ul>
-        </>
+        <ul className={cn(styles.mainCatalogLinks)} >
+            {mainCatalogLinksItems}
+        </ul>
     )
 }

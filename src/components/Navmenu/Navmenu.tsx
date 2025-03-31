@@ -12,15 +12,8 @@ type Props = {
   className?: string | undefined;
 };
 
-// interface MenuItem {
-//   key: string;
-//   label: string;
-//   path: string;
-// }
-
 export const Navmenu: FC<Props> = () => {
   const [openBurger, setOpenBurger] = useState(false);
-  // const navigate = useNavigate();
 
   const showDrawer = () => {
     setOpenBurger(true);
@@ -29,18 +22,6 @@ export const Navmenu: FC<Props> = () => {
   const onClose = () => {
     setOpenBurger(false);
   };
-
-  // const menuItems = ROUTES.map((route, index) => ({
-  //   key: String(index),
-  //   label: (
-  //     <NavLink
-  //       to={route.link || '/'}
-  //       onClick={() => setOpenBurger(false)}
-  //     >
-  //       {route.label}
-  //     </NavLink>
-  //   ),
-  // }));
 
   const menuItems = [
     {
@@ -77,11 +58,6 @@ export const Navmenu: FC<Props> = () => {
       ),
     },
   ]
-
-  // const handleMenuClick: MenuProps['onClick'] = (e) => {
-  //   navigate(e.key);
-  //   onClose();
-  // };
 
   return (
     <>

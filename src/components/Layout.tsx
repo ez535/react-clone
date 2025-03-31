@@ -1,10 +1,15 @@
 import React from 'react';
-import { Outlet } from 'react-router';
+import cn from 'classnames';
+import { Outlet, useLocation } from 'react-router';
 import { Navmenu } from './Navmenu/Navmenu';
 import { Header } from './Header/Header';
-import { Logo } from '../ui/logo';
+import { Logo } from '../ui/Logo/Logo';
+import { Footer } from './Footer/Footer';
+import * as styles from './Layout.module.css';
 
 export const Layout = () => {
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
     return(
         <>
             <Header 
@@ -13,7 +18,10 @@ export const Layout = () => {
                 <Logo className='logo'>A-Store</Logo>
                 <Navmenu className='navMenu'/>
             </Header>
-            <Outlet />
+            <main className={cn(isHomePage ? '': styles.main)}>
+                <Outlet />
+            </main>
+            {!isHomePage && <Footer />}
         </>
     )
 }

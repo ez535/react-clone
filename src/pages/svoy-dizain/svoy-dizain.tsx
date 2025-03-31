@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
-import { Typography } from 'antd';
+import { Title } from '../../components/Title/Title';
 
 const SvoyDizain: FC = () => {
   return (
     <>
-      <Typography.Title level={4}>Свой дизайн</Typography.Title>
+      <Title title="Свой дизайн"/>
     </>
   );
 };

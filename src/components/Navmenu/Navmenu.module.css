@@ -37,6 +37,15 @@
     font-weight: 700;
 }
 
+.myDrawer .ant-menu .ant-menu-item-selected,
+.myDrawer .ant-menu .ant-menu-item:active {
+    background-color: transparent!important;
+}
+
+.myDrawer .ant-menu .ant-menu-title-content .active {
+    opacity: 70%;
+}
+
 .myDrawer .ant-drawer-header {
     padding: 20px 20px 0 0;
     border-bottom: unset;

@@ -24,4 +24,9 @@
 :global ul {
     padding-left: unset;
     margin: unset;
+    list-style-type: none;
+}
+
+:global h2 {
+    margin: 0;
 }

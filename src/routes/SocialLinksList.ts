@@ -5,7 +5,7 @@ export interface SocLinkItem {
     icon?: string; 
 }
 
-export const SocialLinksList: SocLinkItem[] = [
+export const socialLinksList: SocLinkItem[] = [
     { id: 'whatsup', href: 'https://wa.me/79060616020', label: 'WhatsUp'},
     { id: 'mail', href: 'mailto:info@alfabankstore.ru', label: 'Mail'},
 ];

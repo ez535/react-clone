@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {SocialLinksList} from '../../SocialLinksList';
+import {socialLinksList} from '../../routes/SocialLinksList';
 import cn from 'classnames';
 import { NavLink } from 'react-router-dom';
 import * as styles from './SocialLinks.module.css';
@@ -21,7 +21,7 @@ const MailIcon = () => (
 );
 
 export const SocialLinks: FC<Props> = () => {
-    const socialLinksItems = SocialLinksList.map((socialItem, index) => (
+    const socialLinksItems = socialLinksList.map((socialItem, index) => (
         <li className={cn(styles.socialLinksItem)} key={String(index)}>
             <NavLink
                 to={socialItem.href || '/'}

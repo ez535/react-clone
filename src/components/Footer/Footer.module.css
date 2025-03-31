@@ -1,0 +1,9 @@
+footer.footer {
+    height: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer span {
+    opacity: 25%;
+}
