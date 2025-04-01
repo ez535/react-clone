@@ -1,0 +1,75 @@
+
+.ant-drawer .ant-drawer-mask {
+    background-color: rgba(255, 255, 255, 70%);
+}
+
+.header .btn_menu {
+    border: none;
+    box-shadow: none;
+    padding: unset;
+    font-size: 32px;
+    font-weight: 500;
+    display: flex;
+    gap: 15px;
+    background-color: transparent;
+    color: black;
+}
+
+.header .btn_menu:hover {
+    background-color: transparent!important;
+    color: black!important;
+}
+
+.ant-drawer-content-wrapper .myDrawer,
+.myDrawer .ant-menu {
+    background: black;
+}
+
+.myDrawer .ant-drawer-body {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.myDrawer .ant-menu .ant-menu-title-content {
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.myDrawer .ant-menu .ant-menu-item-selected,
+.myDrawer .ant-menu .ant-menu-item:active {
+    background-color: transparent!important;
+}
+
+.myDrawer .ant-menu .ant-menu-title-content .active {
+    opacity: 70%;
+}
+
+.myDrawer .ant-drawer-header {
+    padding: 20px 20px 0 0;
+    border-bottom: unset;
+}
+
+.myDrawer .ant-drawer-header-title {
+    justify-content: flex-end;
+}
+
+.myDrawer .ant-drawer-close svg {
+    fill: white;
+    width: 30px;
+    height: 30px;
+}
+
+.ant-drawer-content-wrapper {
+    max-width: 575px!important;
+    width: 100%!important;
+}
+
+.navMenu {
+    border-inline-end: none !important;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
