@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import * as styles from './SocialLinks.module.css';
 
 type Props = {
-    className?: string | undefined;
+    className?: string;
 };
 
 const WhatsUpIcon = () => (

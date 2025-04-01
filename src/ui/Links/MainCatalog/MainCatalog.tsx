@@ -2,7 +2,6 @@ import React, {FC} from 'react';
 import cn from 'classnames';
 import {mainCatalogLinksList} from '../../../routes/MainCatalogLinks';
 import { NavLink } from 'react-router-dom';
-
 import * as styles from './MainCatalog.module.css';
 
 type Props = {

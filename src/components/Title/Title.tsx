@@ -6,18 +6,14 @@ import cn from 'classnames';
 import * as styles from './Title.module.css';
 
 type Props = {
-    title?: string;
+  title?: string;
 };
 
 export const Title: FC<Props> = ({title = ''}) => {
   const location = useLocation();
 
   useEffect(() => {
-    if(location.pathname === '/') {
-      document.title = 'Главная'
-    } else {
-      document.title = title;
-    }
+      document.title = `Alfa-clone ${title}`;
   }, [location, title]);
 
   return (

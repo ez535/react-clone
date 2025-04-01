@@ -9,7 +9,7 @@ import {SocialLinks} from '../SocialLinks/SocialLinks';
 import * as styles from'./Navmenu.module.css';
 
 type Props = {
-  className?: string | undefined;
+  className?: string;
 };
 
 export const Navmenu: FC<Props> = () => {
